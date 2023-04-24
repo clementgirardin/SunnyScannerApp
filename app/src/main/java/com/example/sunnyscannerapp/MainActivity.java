@@ -10,5 +10,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        // Création d'une instance d'infoFragment
+        mainFragment fragmentMain = new mainFragment();
+        // Remplace activity main par le fragment map
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentMain).commit();
     }
 }
